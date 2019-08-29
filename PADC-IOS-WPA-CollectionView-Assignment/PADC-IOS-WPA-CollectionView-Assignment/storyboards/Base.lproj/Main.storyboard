@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ckL-ir-2Ve">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bookshelf-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PADC_IOS_WPA_CollectionView_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bookshelf" image="icons8-book_filled" id="KfI-6j-Kzt">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="-373"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2gr-F0-1sv">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ckL-ir-2Ve" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vNf-l9-a35">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="DarkBlueColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RA5-R3-TQM"/>
+                        <segue destination="ImQ-ME-uhA" kind="relationship" relationship="viewControllers" id="8Pw-S5-pZd"/>
+                        <segue destination="JQL-mY-RMv" kind="relationship" relationship="viewControllers" id="e38-6A-3pr"/>
+                        <segue destination="lfw-PB-fGN" kind="relationship" relationship="viewControllers" id="qEV-Av-k2l"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52f-PY-Dqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--Book Store View Controller-->
+        <scene sceneID="0je-So-VGa">
+            <objects>
+                <viewController id="BHY-GT-CbB" customClass="BookStoreViewController" customModule="PADC_IOS_WPA_CollectionView_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZUM-C8-MgE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KWd-6g-Vov">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" name="DarkBlueColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yXc-Do-baD">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KWd-6g-Vov" secondAttribute="bottom" id="CuO-0v-NVB"/>
+                            <constraint firstItem="ubk-2r-hjA" firstAttribute="trailing" secondItem="KWd-6g-Vov" secondAttribute="trailing" id="etw-Al-d6q"/>
+                            <constraint firstItem="KWd-6g-Vov" firstAttribute="top" secondItem="ubk-2r-hjA" secondAttribute="top" id="lIY-i5-5E4"/>
+                            <constraint firstItem="KWd-6g-Vov" firstAttribute="leading" secondItem="ubk-2r-hjA" secondAttribute="leading" id="wMp-7R-haB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ubk-2r-hjA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9AC-Kh-B2J">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-menu" id="pqP-9l-FWV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="icons8-appointment_reminders_filled" id="mAb-HE-eh2">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="icons8-news" id="3Ft-7L-Dp2">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionViewBookStore" destination="KWd-6g-Vov" id="nd2-gY-iQC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70Y-gy-WP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2211.594202898551" y="327.45535714285711"/>
+        </scene>
+        <!--Bag-->
+        <scene sceneID="Ram-Mh-Igp">
+            <objects>
+                <viewController id="JQL-mY-RMv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zrj-As-p81">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qPL-ZL-OAy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bag" image="icons8-bag_front_view_filled" id="Kc7-Ar-5O6">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHy-Er-ApP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301" y="1106"/>
+        </scene>
+        <!--Communication-->
+        <scene sceneID="IEQ-rQ-kzr">
+            <objects>
+                <viewController id="lfw-PB-fGN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zlx-zc-djT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bKo-sV-UFN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Communication" image="icons8-communication_filled" selectedImage="icons8-communication" id="ZIi-Wp-fHG">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="26" maxX="0.0" maxY="24"/>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j93-SW-hBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301" y="1864"/>
+        </scene>
+        <!--Bookstore-->
+        <scene sceneID="wMK-3o-3Zv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ImQ-ME-uhA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bookstore" image="icons8-saddle_stitched_booklet_filled" id="3ZZ-II-BKL">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5xu-He-6oI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="DarkBlueColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BHY-GT-CbB" kind="relationship" relationship="rootViewController" id="3S2-xx-kCd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5tZ-3j-cRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301.449275362319" y="327.45535714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-appointment_reminders_filled" width="25" height="25"/>
+        <image name="icons8-bag_front_view_filled" width="25" height="25"/>
+        <image name="icons8-book_filled" width="25" height="25"/>
+        <image name="icons8-communication" width="12.5" height="12.5"/>
+        <image name="icons8-communication_filled" width="25" height="25"/>
+        <image name="icons8-menu" width="24" height="24"/>
+        <image name="icons8-news" width="25" height="25"/>
+        <image name="icons8-saddle_stitched_booklet_filled" width="25" height="25"/>
+        <namedColor name="DarkBlueColor">
+            <color red="0.0" green="0.015686274509803921" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
